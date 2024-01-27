@@ -1,0 +1,26 @@
+(run
+  (let x 1)
+  (let y -3)
+  (let z (+ x y))
+  (print x)
+  (print y)
+  (print z)
+  (print (* (+ z z) y))
+  (print (if (> z y) z y))
+  (let testfunc (lambda
+    (if
+      (== x y)
+      (run
+        (print "Yay!")
+        (print x)
+        (print x)
+        (print x)
+        (print x)
+      ) 
+      (print "Boo!")
+    )
+  ))
+  (call testfunc)
+  (let y 1)
+  (call testfunc)
+)

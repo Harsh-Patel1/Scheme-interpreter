@@ -1,0 +1,9 @@
+(run
+  (let x 123)
+  (let y 321)
+  (let z "Hello")
+  (if (> x y) (print z) (print "No"))
+  (if (== z z) (print (if (< x y) 1 2)) (print "Nopenope"))
+  (let a (if (== x 321) 5 6))
+  (print a)
+)

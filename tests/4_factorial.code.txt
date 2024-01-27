@@ -1,0 +1,19 @@
+(run
+  (let factorial
+    (lambda
+      (if (== n 0)
+          1
+          (* n (run
+            (let n (- n 1))
+            (call factorial)
+          ))
+      )
+    )
+  )
+  (let n 3)
+  (print (call factorial))
+  (let n 6)
+  (print (call factorial))
+  (let n 100)
+  (print (call factorial))
+)
